@@ -161,19 +161,30 @@ img{
   }
 
   .navbar .navbar-brand{
-    max-width: 78vw;
+    /* Toggler butonunun her telefonda aynı satırda kalması için */
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 4.25rem);
   }
 
   .brand-badge{
     display: inline-flex;
     align-items: center;
-    max-width: 78vw;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.95rem;
     padding: 0.28rem 0.75rem;
     letter-spacing: 0.2px;
+  }
+
+  .navbar .navbar-toggler{
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
   }
 
   .brand-badge > span:first-child{
